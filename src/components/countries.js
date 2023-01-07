@@ -48,8 +48,7 @@ export function displayCountries(data) {
     const formattedPopulation = new Intl.NumberFormat('en-US').format(population);
 
     template += `
-    <div class="bg-white text-fgDarkBlue rounded drop-shadow-lg transition ease-in-out hover:scale-105 dark:bg-darkBlue
-    dark:text-white">
+    <div class="bg-white rounded drop-shadow-lg transition-all ease-in-out duration-500 hover:scale-105 dark:bg-darkBlue">
       <a href="#">
         <img
           class="w-full object-cover rounded-t md:h-48"
@@ -58,16 +57,16 @@ export function displayCountries(data) {
         />
       </a>
       <div class="pt-5 pb-10 px-6">
-        <h4 class="mb-2 text-lg font-extrabold transition ease-out hover:text-darkGray">
+        <h4 class="mb-2 text-lg font-extrabold text-fgDarkBlue transition-all ease-in-out duration-500 hover:text-darkGray dark:text-white">
           <a href="#">${common}</a>
         </h4>
-        <p class="mb-1 text-sm font-semibold">
+        <p class="mb-1 text-sm font-semibold text-fgDarkBlue transition-colors ease-in-out duration-500 dark:text-white">
           Population: <span class="font-normal">${formattedPopulation}</span>
         </p>
-        <p class="mb-1 text-sm font-semibold">
+        <p class="mb-1 text-sm font-semibold text-fgDarkBlue transition-colors ease-in-out duration-500 dark:text-white">
           Region: <span class="font-normal">${region}</span>
         </p>
-        <p class="mb-1 text-sm font-semibold">
+        <p class="mb-1 text-sm font-semibold text-fgDarkBlue transition-colors ease-in-out duration-500 dark:text-white">
           Capital: <span class="font-normal">${capital}</span>
         </p>
       </div>

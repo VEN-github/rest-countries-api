@@ -11,12 +11,12 @@ document.querySelector('#app').innerHTML = `
   <main class="my-8">
     <section class="mb-5">
       <div class="container mx-auto p-4 md:flex md:justify-between md:items-center">
-        <div class="flex justify-start items-center space-x-4 mb-10 p-4 bg-white rounded drop-shadow-lg md:w-1/3 md:mb-0 dark:bg-darkBlue">
-          <ion-icon name="search-outline" class="text-darkGray dark:text-white"></ion-icon>
+        <div class="flex justify-start items-center space-x-4 mb-10 p-4 bg-white rounded drop-shadow-lg transition-colors ease-in-out duration-500 md:w-1/3 md:mb-0 dark:bg-darkBlue">
+          <ion-icon name="search-outline" class="text-darkGray transition-colors ease-in-out duration-500 dark:text-white"></ion-icon>
           <input
             type="search"
             id="searchCountry"
-            class="w-full text-sm text-fgDarkBlue focus:outline-none md:text-base dark:bg-darkBlue dark:text-white"
+            class="w-full text-sm text-fgDarkBlue focus:outline-none transition-colors ease-in-out duration-500 md:text-base dark:bg-darkBlue dark:text-white"
             placeholder="Search for a country..."
           />
         </div>
@@ -24,14 +24,14 @@ document.querySelector('#app').innerHTML = `
           <div class="relative">
             <button
               id="dropdownBtn"
-              class="flex justify-between items-center space-x-4 w-48 py-4 px-5 font-semibold bg-white text-fgDarkBlue rounded drop-shadow-lg dark:bg-darkBlue dark:text-white"
+              class="flex justify-between items-center space-x-4 w-48 py-4 px-5 font-semibold bg-white text-fgDarkBlue rounded drop-shadow-lg transition-colors ease-in-out duration-500 dark:bg-darkBlue dark:text-white"
             >
               <span class="text-sm md:text-base">Filter by Region</span
               ><ion-icon name="chevron-down-outline"></ion-icon>
             </button>
             <div
               id="filterMenu"
-              class="absolute z-10 hidden w-48 mt-4 p-4 font-semibold bg-white text-fgDarkBlue rounded drop-shadow-lg
+              class="absolute z-10 hidden w-48 mt-4 p-4 font-semibold bg-white text-fgDarkBlue rounded drop-shadow-lg transition-colors ease-in-out duration-500
               dark:bg-darkBlue dark:text-white"
             >
               <ul id="regionLists"></ul>
@@ -39,7 +39,7 @@ document.querySelector('#app').innerHTML = `
           </div>
           <button
             id="resetBtn"
-            class="hidden w-48 py-4 px-5 text-sm font-semibold bg-white text-fgDarkBlue rounded drop-shadow-lg md:text-base
+            class="hidden w-48 py-4 px-5 text-sm font-semibold bg-white text-fgDarkBlue rounded drop-shadow-lg transition-colors ease-in-out duration-500 md:text-base
             dark:bg-darkBlue dark:text-white"
           >
             Reset
