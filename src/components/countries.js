@@ -1,3 +1,5 @@
+import { setupFilterByCountry } from './filter.js';
+
 export async function initCountries() {
   try {
     const response = await fetch('https://restcountries.com/v3.1/all');
@@ -37,6 +39,7 @@ export function displayRegions(data) {
     }
   });
   container.innerHTML = list;
+  setupFilterByCountry(container);
 }
 
 export function displayCountries(data) {

@@ -1,7 +1,7 @@
 import './assets/css/style.css';
 import { header, toggleDarkMode } from './layout/header/header.js';
 import { setupSearchByCountry } from './components/search.js';
-import { showFilterMenu, resetFilter } from './components/filter.js';
+import { toggleFilter, resetFilter } from './components/filter.js';
 import { showSkeleton } from './components/skeleton.js';
 import { initRegions, initCountries } from './components/countries.js';
 import { initTheme } from './components/theme.js';
@@ -65,5 +65,5 @@ window.addEventListener('load', () => {
 
 toggleDarkMode(document.getElementById('darkModeBtn'));
 setupSearchByCountry(document.getElementById('searchCountry'));
-// showFilterMenu(document.getElementById('dropdownBtn'));
-// resetFilter(document.getElementById('resetBtn'));
+toggleFilter(document.getElementById('dropdownBtn'));
+resetFilter(document.getElementById('resetBtn'));
