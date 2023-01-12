@@ -1,4 +1,4 @@
-import { showSkeleton } from './skeleton.js';
+import { showMainSkeleton } from './skeleton.js';
 import { initCountries, displayCountries } from './countries.js';
 
 export function setupSearchByCountry(element) {
@@ -6,7 +6,7 @@ export function setupSearchByCountry(element) {
   const MILLISECONDS = 1500;
 
   element.addEventListener('input', () => {
-    showSkeleton();
+    showMainSkeleton();
     clearTimeout(timer);
 
     if (element.value) {
@@ -23,13 +23,15 @@ async function searchByCountryName(event) {
   try {
     if (countryName === '') return;
 
-    const response = await fetch(`https://restcountries.com/v3.1/name/${countryName}`);
+    const response = await fetch(`https://restcountries.com/v2/name/${countryName}`);
 
     if (response.status == 200) {
       const data = await response.json();
+
       displayCountries(data);
     } else {
       initCountries();
+
       const { message } = await response.json();
       alert(message);
       event.value = '';

@@ -1,5 +1,5 @@
+import { showMainSkeleton } from './skeleton.js';
 import { displayCountries, initCountries } from './countries.js';
-import { showSkeleton } from './skeleton.js';
 
 export function toggleFilter(element) {
   element.addEventListener('click', () => {
@@ -21,10 +21,10 @@ async function filterByRegion(event) {
 
   resetBtn.classList.remove('hidden');
   filterMenu.classList.add('hidden');
-  showSkeleton();
+  showMainSkeleton();
 
   try {
-    const response = await fetch(`https://restcountries.com/v3.1/region/${region}`);
+    const response = await fetch(`https://restcountries.com/v2/region/${region}`);
     const data = await response.json();
 
     displayCountries(data);
@@ -36,7 +36,7 @@ async function filterByRegion(event) {
 export function resetFilter(element) {
   element.addEventListener('click', () => {
     element.classList.add('hidden');
-    showSkeleton();
+    showMainSkeleton();
     initCountries();
   });
 }
