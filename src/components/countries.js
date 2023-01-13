@@ -302,16 +302,10 @@ export function displayRegions(data) {
   const container = document.getElementById('regionLists');
   let list = '';
 
-  data.forEach((region, index, array) => {
-    if (index === array.length - 1) {
-      list += `
-      <li class="text-sm cursor-pointer transition ease-out hover:text-darkGray md:text-base">${region}</li>
+  data.forEach(region => {
+    list += `
+      <li class="mb-1.5 text-sm cursor-pointer transition ease-out hover:text-darkGray md:text-base last:mb-0">${region}</li>
     `;
-    } else {
-      list += `
-      <li class="mb-1.5 text-sm cursor-pointer transition ease-out hover:text-darkGray md:text-base">${region}</li>
-    `;
-    }
   });
   container.innerHTML = list;
   setupFilterByCountry(container);
